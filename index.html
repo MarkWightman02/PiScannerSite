@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Bootstrap 4 Starter Template</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Raspberry Pi Scanner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Free Version of fontawsome 5 -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -13,13 +13,12 @@
   <link href="css/scrolling-nav.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="css/custom.css" rel="stylesheet">
+
+  <!-- My CSS goes after this line -->
 </head>
-
 <body id="page-top">
-
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><i class="fas fa-home"></i> PiScanner</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
               aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,28 +30,28 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            <a class="nav-link js-scroll-trigger" href="#documentation">Documentation</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
-    </div>
   </nav>
 
   <header class="bg-primary text-white">
     <div class="container text-center">
+      <img class="img-fluid rounded-circle mb-4" src="Images/pilogo1.png" alt="pilogo">
       <h1>Raspberry Pi Scanner</h1>
       <p class="lead">A project by Mark Wightman Jr.</p>
-      <a class="btn btn-success" href="https://www.localhost/site/" target="_blank">Demo</a>
+      <a class="btn btn-success btn-lg shadow mt-4" href="https://www.localhost/site/" target="_blank">Demo</a>
     </div>
   </header>
 
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-5">
           <h2>About</h2>
           <p class="lead">The Raspberry Pi RFID Scanner is a project that seeks to create a new system for taking attendance in a school or workplace enviornment</p>
           <ul>
@@ -61,53 +60,75 @@
             <li>Simplify Your Attendance! By removing a user, the Raspberry pi RFID Scanner will make taking attendance much simpler!</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="col-lg-7">
+          <div id="demo" class="carousel slide" data-ride="carousel">
 
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Image Gallery</h2>
-          <img src = "Images/Filler.jpg" height="200px">
-          <img src = "Images/Filler2.jpg" height="200px">
-          <img src = "Images/Filler3.jpg" height="200px" class="center">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="img-fluid" src="Images/IMG_1230.jpg" alt="img1">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="Images/IMG_1281.jpg" alt="img2">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="Images/IMG_1299.jpg" alt="img3">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col-4">
+          <img class="img-fluid" src="Images/humanpictos.png" alt="img3">
+        </div>
+        <div class="col-4">
+          <img class="img-fluid" src="Images/square.png" alt="img3">
+        </div>
+        <div class="col-4">
+          <img class="img-fluid" src="Images/avatar.png" alt="img3">
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="documentation" class="bg-light">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Design Process</h2>
-          <p class="lead">The design process for the project was an iterative process including research, diagrams, prototyping and design.</p>
-          <h3>Research</h3>
-          <p>Going into the project, I had very little exposure to the technology I would be using. I had to learn about GPIO pins, Python, PHP, and HTML languages as well as how to use project  management tools such as Git and Trello.</p>
-          <h3>Diagrams</h3>
-          <p>Instead of going straight from research to design, I created diagrams such as the ones below in order to keep myself organized. Diagrams helped to simplify the design process because I had everything that I would designing laid out.</p>
-          <img src = "Images/Diagram.jpg">
-          <p>This diagram shows how each unique user would interact with the scanners.</p>
-          <h3>Prototyping</h3>
-          <p>I made prototypes for each part of the project instead of going straight to designing. Prototypes helped me work out errors that would have been problematic if I had started designing without catchign them. During this stage, I used breadboards to wire modules into the Pi's due to the ease of access to the pins. I also used Git in order to prototype the website and code in order to make sure I always had a folder with code that I know worked.</p>
-          <h3>Design</h3>
-          <p>Designing the project was where I learned the most. Through trial and error, I learned how GPIO pins work and how I can manipulate computer languages to my liking. After the modules were wired to the pi without the breadboard, I integrated the code. The logic behind the Pi scanner is written in Python, I had to manipulate this code to send data to a remote database which was used for the website. The website was written with HTML, CSS, and PHP.</p>
-
+      <h1 class="text-center" style="margin-bottom:80px">Documenation</h1>
+      <div class="card-columns text-center">
+        <div class="card bg-secondary border-primary shadow-sm text-white" style="width:250px">
+          <img class="card-img-top" src="Images/sharing.png" alt="Card image" style="width:100%">
+          <div class="card-body text-center">
+            <a href="#" class="btn stretched-link text-white" data-toggle="modal" data-target="#mdl1">How to implement</a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Demo</h2>
-          <p class="lead">You can demo the project by going to the website at the link below!</p>
-          <a class="btn btn-success" href="https://www.localhost/site/" target="_blank">Demo</a>
-          <img src = "Images/SiteExample.jpg" width = "1000px">
+        <div class="card bg-primary shadow-sm text-white" style="width:250px">
+          <img class="card-img-top" src="Images/stats.png" alt="Card image" style="width:100%">
+          <div class="card-body text-center">
+            <a href="#" class="btn stretched-link text-white" data-toggle="modal" data-target="#mdl2">Project Time Line</a>
+          </div>
+        </div>
+        <div class="card bg-secondary border-primary shadow-sm text-white" style="width:250px">
+          <img class="card-img-top" src="Images/analytics.png" alt="Card image" style="width:100%">
+          <div class="card-body text-center">
+            <a href="#" class="btn stretched-link text-white" data-toggle="modal" data-target="#mdl3">Development Approach</a>
+          </div>
         </div>
       </div>
     </div>
@@ -116,10 +137,84 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Mark Wightman 2020</p>
     </div>
-    <!-- /.container -->
   </footer>
+
+  <!-- Modals -->
+<div class="modal" id="mdl1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Impementation</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        TODO
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div class="modal" id="mdl2">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Time Line</h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+      TODO
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- Modals -->
+<div class="modal" id="mdl3">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Dev/Design Approach</h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+      TODO
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+
+  </div>
+</div>
+</div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -130,7 +225,5 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
-
 </body>
-
 </html>
