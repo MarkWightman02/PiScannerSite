@@ -11,3 +11,7 @@ body::-webkit-scrollbar {display: none;}
   background:none!important;
   height:500px;width:100%;
 }
+.cardStyle:hover{
+  opacity: 0.7;
+  box-shadow: 10px 10px 14px -7px rgba(0,0,0,0.75);
+}
