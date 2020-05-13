@@ -191,22 +191,52 @@
 
   <!-- Modals -->
 <div class="modal" id="mdl1">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
       <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Impementation</h4>
+      <div class="modal-header bg-primary text-white">
+        <h4 class="modal-title">Implementation</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        TODO
+        <h2>Implementation</h2>
+        <p>
+          Implementation of the PI Scanner system will vary depending on the enviornment and any customizations made.
+          However, the high-level steps have been provided below.
+        </p>
+        <ul>
+          <li>Set-up an admin scanner in a secure location where only the IT department can reach it</li>
+          <li>
+            Install at least one user scanner into a location where the scanner portion is accessible.
+            Some options for this include installing the case into the wall, leaving the scanning side
+            facing outwards or installing the board behind the wall while keeping the scanner on the
+            outside of the wall.
+          </li>
+          <li>
+            Power both scanners. This is done by using a micro-usb cable from a standard wall outlet into the board.
+          </li>
+          <li>Create ID cards for all required members of the organization.</li>
+          <li>Distribute ID cards to members</li>
+        </ul>
+        <p>The following image shows an example of how the system is installed/mounted</p>
+        <img class="img-fluid" src="Images/mounted.png" alt="">
+        <h3 class="my-4">Use Cases</h3>
+        <div class="mb-3 embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lGSIRdfcnqc" allowfullscreen></iframe>
+        </div>
+        <div class="mb-3 embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/p89917MZclw" allowfullscreen></iframe>
+        </div>
+        <div class="mb-3 embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j4eLQEBtLvo" allowfullscreen></iframe>
+        </div>
       </div>
 
       <!-- Modal footer -->
-      <div class="modal-footer">
+      <div class="modal-footer bg-secondary">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
 
@@ -216,22 +246,22 @@
 
 <!-- Modals -->
 <div class="modal" id="mdl2">
-<div class="modal-dialog">
+<div class="modal-dialog modal-lg">
   <div class="modal-content">
 
     <!-- Modal Header -->
-    <div class="modal-header">
+    <div class="modal-header bg-primary text-white">
       <h4 class="modal-title">Time Line</h4>
       <button type="button" class="close" data-dismiss="modal">&times;</button>
     </div>
 
     <!-- Modal body -->
     <div class="modal-body">
-      TODO
+      <img class="img-fluid" src="Images/timeLine.png" alt="timeline">
     </div>
 
     <!-- Modal footer -->
-    <div class="modal-footer">
+    <div class="modal-footer bg-secondary">
       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
     </div>
 
@@ -241,22 +271,77 @@
 
 <!-- Modals -->
 <div class="modal" id="mdl3">
-<div class="modal-dialog">
+<div class="modal-dialog modal-lg">
   <div class="modal-content">
 
     <!-- Modal Header -->
-    <div class="modal-header">
+    <div class="modal-header bg-primary text-white">
       <h4 class="modal-title">Dev/Design Approach</h4>
       <button type="button" class="close" data-dismiss="modal">&times;</button>
     </div>
 
     <!-- Modal body -->
     <div class="modal-body">
-      TODO
+      <h2>Design Process</h2>
+      <p>
+        The design process for the project was an iterative process including
+        research, diagrams, prototyping and design.
+      </p>
+      <h3>Research</h3>
+      <p>
+        Going into the project, I had very little exposure to the technology I
+        would be using. I had to learn about GPIO pins, Python, PHP, and HTML
+        languages as well as how to use project  management tools such as Git
+        and Trello.
+      </p>
+      <h3>Diagrams</h3>
+      <p>
+        Instead of going straight from research to design, I created diagrams such
+        as the ones below in order to keep myself organized. Diagrams helped to simplify
+        the design process because I had everything that I would designing laid out.
+      </p>
+      <img src = "Images/Diagram.jpg">
+      <p>
+        <b>Local environment: </b>The user will swipe their RFID card on the scanner,
+         after that, the user is finished with their interaction. The scanner will
+         then send the RFID of the card and the time it was swiped to a remote database.
+      </p>
+      <p>
+        <b>Remote environmental: </b>The remote database houses a table which pairs
+         RFID numbers and names, and a table which pairs names with times that the card
+         was swiped. When the database receives an RFID and time, it makes a new row in
+         the table and displays that someone swiped their card at some time. That information
+         is displayed on the website in a user-friendly format.
+      </p>
+      <p>
+        <b>Creation of RFID cards: </b>An IT administrator or equivalent will swipe an
+        RFID card on an admin scanner. If the RFID is not registered with a name, the scanner
+        will prompt for a name to be registered. That name will then be updated in the database
+        to be attached to the RFID. If the RFID is registered with a name, the scanner will
+        prompt that the name will be overwritten. A new name will then be entered and it
+        will update in the database.
+      </p>
+      <h3>Prototyping</h3>
+      <p>
+        I made prototypes for each part of the project instead of going straight to designing.
+        Prototypes helped me work out errors that would have been problematic if I had started
+        designing without catchign them. During this stage, I used breadboards to wire modules
+        into the Pi's due to the ease of access to the pins. I also used Git in order to prototype
+        the website and code in order to make sure I always had a folder with code that I know worked.
+      </p>
+      <h3>Design</h3>
+      <p>
+        Designing the project was where I learned the most. Through trial and error, I
+        learned how GPIO pins work and how I can manipulate computer languages to my liking.
+        After the modules were wired to the pi without the breadboard, I integrated the code.
+        The logic behind the Pi scanner is written in Python, I had to manipulate this code
+        to send data to a remote database which was used for the website. The website was
+        written with HTML, CSS, and PHP.
+      </p>
     </div>
 
     <!-- Modal footer -->
-    <div class="modal-footer">
+    <div class="modal-footer bg-secondary">
       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
     </div>
 
